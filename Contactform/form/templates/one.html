@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT FORM</title>
+    {% load static %}
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+</head>
+{% load static %}
+<body id="bg"style="background-image: url('{% static 'images/WALLPAPER.jpg'%}');">
+   <div class="container">
+        <h1><u>CONTACT US</u></h1>
+        <form onsubmit="return validateForm()" method="POST" action="/">
+            {% csrf_token %}
+            <div class="form-group">ENTER NAME:<input name="nameInput" type="text" placeholder="Name" id="name"></div>
+            <div class="form-group">ENTER EMAIL:<input name="emailInput" placeholder="Email" id="email"></div>
+            <div class="form-group">ENTER MESSAGE:<textarea name="messageInput"cols="20" rows="5" placeholder="How we can help you?" id="message"></textarea></div>
+        <input id="btn" type="submit" value="SUBMIT">
+        </form>  
+ </div>
+</body>
+</html>
